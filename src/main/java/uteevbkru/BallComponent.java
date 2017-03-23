@@ -12,14 +12,16 @@ public class BallComponent extends JPanel{
 	private java.util.List<Ball> balls = new ArrayList<Ball>();
 	
 	public void add(Ball a){
-		balls.add(a);
+		balls.add(a);	
 	}
 	
 	public void paintComponent(Graphics g){
 		super.paintComponent(g);
 		Graphics2D g2 = (Graphics2D) g;
-		for(Ball b : balls){
-			g2.fill(b.getShape());
+		for(Ball b : balls){			
+			Paint p = Color.CYAN;
+			g2.setPaint(p);
+			g2.fill(b.getShape());//было draw!!
 		}		
 	}
 	
